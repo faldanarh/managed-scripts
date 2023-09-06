@@ -22,7 +22,7 @@ for f in $jfiles
 do
    echo "validating the jsonschema for $f"
 ##   if ! $CONTAINER_ENGINE run --rm -v $(pwd):/data localhost/jsonschema -i /data/$f /data/hack/metadata.schema.json; then
-   if ! $CONTAINER_ENGINE run --rm -v $(pwd):/data localhost/check-jsonschema --schemafile /data/hack/metadata.schema.json /data/$f; then
+   if ! $CONTAINER_ENGINE run --rm -v $(pwd):/data quay.io/taislam_osd/managed-scripts-test --schemafile /data/hack/metadata.schema.json /data/$f; then
      echo "validation failed: $f"
      exit 1
    else
