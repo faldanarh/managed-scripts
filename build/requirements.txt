@@ -1,0 +1,2 @@
+check-jsonschema==0.26.3
+jsondiff==2.0.0

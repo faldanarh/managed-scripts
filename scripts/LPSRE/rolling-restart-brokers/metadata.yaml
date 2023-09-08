@@ -13,7 +13,7 @@ rbac:
         - "apps"
       resources:
         - "statefulsets"
-        - verbs:
+    - verbs:
         - "get"
         - "list"
       apiGroups:
